@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishraks Reverse Dimension</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00aaff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            background: radial-gradient(circle, #ffffff 1px, transparent 1px), linear-gradient(135deg, #000000, #001f3f);
+            background-size: 20px 20px, 100% 100%;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .tagline {
+            display: block;
+            font-size: 14px;
+            color: #00aaff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0074d9;
+        }
+
+        .hero-graphic {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #00aaff, #0074d9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+            animation: fadeIn 1s ease-in 0.5s forwards, pulse 2s infinite;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(0, 170, 255, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(0, 170, 255, 0.8); }
+            100% { box-shadow: 0 0 20px rgba(0, 170, 255, 0.5); }
+        }
+
+        .content-section {
+            padding: 80px 40px;
+            text-align: center;
+            border-top: 1px solid #222222;
+        }
+
+        .content-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #00aaff;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #cccccc;
+        }
+
+        .contact-info {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .hero-content {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-graphic {
+                width: 200px;
+                height: 200px;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+            }
+
+            .content-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Ishraks Reverse Dimension</div>
+        <nav>
+            <ul>
+                <li><a href="#thoughts">Thoughts</a></li>
+                <li><a href="#about-web">About Web</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="tagline">The Future is Now</span>
+            <h1>Ishraks Reverse Dimension</h1>
+            <p>A space where thoughts, code, and existence collide.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+        <div class="hero-graphic"></div>
+    </section>
+    <section id="thoughts" class="content-section">
+        <h2>My Thoughts About Study</h2>
+        <p>FuCk oFF</p>
+    </section>
+    <section id="about-web" class="content-section">
+        <h2>About The Web</h2>
+        <p>HTML, CSS, and JS had been used in the web.</p>
+    </section>
+    <section id="about-me" class="content-section">
+        <h2>About Me</h2>
+        <p>I have nothing to say about myself, looks like I'm just a useless being wasting Earth's O₂ and resources, Lmao.</p>
+    </section>
+    <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:israkbhai0@gmail.com">israkbhai0@gmail.com</a></p>
+            <p><strong >Phone:</strong> 017××××××× (publicly not allowed)</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Ishraks Reverse Dimension. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
